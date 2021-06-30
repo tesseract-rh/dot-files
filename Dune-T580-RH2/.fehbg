@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-center '/home/ipetrova/Pictures/BR2049_1080p.jpg' --bg-center '/home/ipetrova/Pictures/7c5f5ee2af5b07b34977fc9b9c43dd2e-quad.jpg'

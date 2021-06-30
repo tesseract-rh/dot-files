@@ -1,0 +1,9 @@
+#!/bin/bash
+
+LED_val=$(xset q | awk -F":  " '/LED mask/ {print $4}')
+
+if [ $LED_val = 00000002 ]; then
+    echo 'US'
+elif [ $LED_val = 00001003 ]; then
+    echo 'FR'
+fi

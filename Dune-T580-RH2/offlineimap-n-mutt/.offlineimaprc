@@ -1,0 +1,23 @@
+[general]
+pythonfile = ~/.offlineimap.py  
+accounts = myGmail
+
+[Account myGmail]
+localrepository = localmyGmail
+remoterepository = remotemyGmail
+
+[Repository remotemyGmail]
+type = Gmail
+remoteuser = xxxxxxxxxxxx@gmail.com
+# remotepass = << plaintext pass ? >> 
+remotepasseval = get_pass()
+ssl = yes
+ssl_version = tls1_2
+sslcacertfile = /etc/ssl/certs/ca-bundle.crt
+
+folderfilter = lambda folder: folder in ['RED label']
+# folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
+
+[Repository localmyGmail]
+type = GmailMaildir
+localfolders = /home/xxxxxxxx/gmail-ip/
